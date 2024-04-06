@@ -18,4 +18,4 @@ user_text = input("Enter the text to encrypt: ")
 encrypted_text = caesar_cipher_encrypt(user_text)
 
 # Output the encrypted text
-print("Encrypted text:", encrypted_text)
+print('The encrypted sentence is: ', encrypted_text)
