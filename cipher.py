@@ -4,7 +4,7 @@ def caesar_cipher_encrypt(text, shift=5):
     for char in text:
         if char.isalpha():
             # Shift character and wrap around the alphabet
-            offset = 65 if char.isupper() else 97
+            offset = 65 if char.islower() else 97
             encrypted_text += chr((ord(char) - offset + shift) % 26 + offset)
         else:
             # Non-alphabetic characters are not changed
