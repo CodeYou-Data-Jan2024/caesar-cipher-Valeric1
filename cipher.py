@@ -1,21 +1,18 @@
-# add your code here
 def caesar_cipher_encrypt(text, shift=5):
     encrypted_text = ""
-    for char in text:
+    for char in text:                      
         if char.isalpha():
-            # Shift character and wrap around the alphabet
-            offset = 65 if char.islower() else 97
-            encrypted_text += chr((ord(char) - offset + shift) % 26 + offset)
+           encrypted_text += chr((ord(char.lower()) - 97 + shift) % 26 + 97)
         else:
             # Non-alphabetic characters are not changed
             encrypted_text += char
     return encrypted_text
 
-# Get user input
-user_text = input("Enter the text to encrypt: ")
+
+user_text = input("Please enter a sentence: ")
 
 # Encrypt the user's text
 encrypted_text = caesar_cipher_encrypt(user_text)
 
 # Output the encrypted text
-print('The encrypted sentence is: ', encrypted_text)
+print("The encrypted sentence is:", encrypted_text)
